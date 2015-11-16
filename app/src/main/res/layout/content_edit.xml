@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_edit" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.birk_home.egclock.egclockrecycler.EditActivity">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameText"
+                android:hint="Name"
+                android:singleLine="true"
+                android:imeOptions="actionDone" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:onClick="onClickView"
+                android:id="@+id/ringToneLayout">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ringToneButton"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_notifications_24dp"
+                    android:onClick="onClickView"/>
+
+                <TextView
+                    android:id="@+id/ringToneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Default"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_photo"
+                android:scaleType="centerCrop"
+                android:maxHeight="100dp"
+                android:maxWidth="150dp"
+                android:onClick="onClickView"
+                android:cropToPadding="true"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hours"
+                        android:id="@+id/textViewHours"
+                        android:layout_gravity="center" />
+
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numberPickerHours" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minutes"
+                        android:id="@+id/textViewMinutes"
+                        android:layout_gravity="center" />
+
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numberPickerMinutes" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seconds"
+                        android:id="@+id/textViewSeconds"
+                        android:layout_gravity="center" />
+
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numberPickerSeconds" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:id="@+id/cancelButton" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:id="@+id/saveButton" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:id="@+id/startButton" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
+
+

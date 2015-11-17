@@ -124,6 +124,7 @@ public class TimerAdapter extends RecyclerView.Adapter<TimerAdapter.TimerViewHol
             timerViewHolder.vButtonPlayPause.setImageResource(R.drawable.ic_pause_24dp);
         }
         if (ti.finished) {
+
             timerViewHolder.alertDialog = new AlertDialog.Builder(context).create();
             timerViewHolder.alertDialog.setMessage(ti.getName() + " has finished!");
             timerViewHolder.alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",

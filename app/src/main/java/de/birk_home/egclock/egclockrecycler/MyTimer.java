@@ -1,5 +1,7 @@
 package de.birk_home.egclock.egclockrecycler;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.Ringtone;
@@ -200,6 +202,9 @@ public class MyTimer implements Serializable {
 
         //TODO Play Sound
         finished = true;
+        Intent intent = ((Activity)tadapter.getContext()).getIntent();
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        ((Activity)tadapter.getContext()).startActivity(intent);
         try {
             mMediaPlayer = new MediaPlayer();
             mMediaPlayer.setDataSource(tadapter.getContext().getApplicationContext(), Uri.parse(notification));
